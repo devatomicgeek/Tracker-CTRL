@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tracker CTRL v3.5</title><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tracker CTRL v3.6</title><style>
 :root{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f5f5f7;background:#0d0d0f;font-size:14px}*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.app{display:grid;grid-template-columns:64px 245px minmax(0,1fr);gap:12px;min-height:100vh;padding:15px}.rail,.sidebar,.main{border:1px solid #303034;border-radius:19px;background:#171719}.rail{display:flex;flex-direction:column;align-items:center;gap:12px;padding:16px 7px;position:sticky;top:15px;height:calc(100vh - 30px)}.rail .logo{font-size:27px;color:#c4f2d2;margin-bottom:20px}.icon{border:0;color:#a5a5ab;background:transparent;border-radius:11px;width:44px;height:44px;font-size:20px}.icon.active,.icon:hover{background:#303335;color:#c4f2d2}.rail .bottom{margin-top:auto}.sidebar{padding:23px 14px;position:sticky;top:15px;height:calc(100vh - 30px);overflow-y:auto}.profile{display:flex;gap:10px;align-items:center;padding:8px 6px 25px;border-bottom:1px solid #303034}.avatar{display:grid;place-items:center;border-radius:50%;background:#35443b;color:#c4f2d2;width:38px;height:38px;font-size:17px;font-weight:700}.muted{color:#92929a}.small{font-size:12px}.sectionlabel{font-size:11px;letter-spacing:1.6px;color:#81818b;text-transform:uppercase;margin:25px 8px 9px}.navitem{width:100%;display:flex;align-items:center;justify-content:space-between;gap:7px;text-align:left;border:0;background:transparent;color:#c3c3c9;padding:11px 12px;border-radius:10px}.navitem:hover,.navitem.active{background:#2a2c2c;color:#c4f2d2}.count{color:#a4a4ac;font-size:11px;background:#303034;border-radius:9px;padding:2px 7px}.tree{margin-top:5px}.tree button{width:100%;border:0;background:transparent;color:#b8b8bf;text-align:left;padding:8px 5px;border-radius:8px;display:flex;align-items:center;gap:5px;font-size:12px}.tree button:hover,.tree button.selected{background:#303335;color:#c4f2d2}.tree .twisty{width:13px;flex:none}.tree .tree-count{margin-left:auto;color:#888}.main{min-width:0;padding:30px 34px 70px;background:#19191c}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.eyebrow{text-transform:uppercase;letter-spacing:2px;color:#c4f2d2;font-size:11px;font-weight:700}h1{font-size:32px;letter-spacing:-1.3px;font-weight:600;margin:9px 0 5px}h2{font-size:19px;font-weight:600;margin:0}p{line-height:1.5}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{border:1px solid #39393e;background:#27272b;color:#f5f5f7;border-radius:10px;padding:11px 15px;font-weight:600}.btn:hover{background:#34343a}.btn.primary{background:#c4f2d2;color:#14231a;border-color:#c4f2d2}.btn.primary:hover{background:#a9dfba}.btn.danger{color:#ffaaaa}.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:27px 0}.stat,.panel{background:#222225;border:1px solid #343439;border-radius:15px}.stat{padding:18px;min-width:0}.stat .label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#a0a0a7}.stat strong{display:block;font-size:33px;font-weight:500;margin:14px 0 4px}.stat small{color:#777781}.panel{padding:20px;margin-bottom:17px}.panelhead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:17px}.bar{height:9px;border-radius:10px;background:#3a3a3f;overflow:hidden;margin-top:13px}.bar>div{height:100%;background:#c4f2d2;border-radius:10px;transition:width .3s}.toolbar{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:15px}.field{background:#18181b;border:1px solid #3b3b40;color:#eee;border-radius:9px;padding:10px 11px;min-width:0}.toolbar .field{flex:1 1 145px}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;text-align:left;min-width:670px}th{font-size:10px;text-transform:uppercase;letter-spacing:1.1px;color:#96969e;font-weight:600;border-bottom:1px solid #38383d;padding:13px 11px}td{border-bottom:1px solid #303034;padding:13px 11px;color:#d6d6db;font-size:12px}tr:last-child td{border-bottom:0}td .taskname{font-weight:600;color:#f5f5f7;font-size:13px}.badge{border-radius:7px;padding:5px 8px;display:inline-block;font-size:11px;white-space:nowrap;background:#333}.badge.done{background:#203d2d;color:#91e2ab}.badge.progress{background:#493b26;color:#f2c078}.badge.approval{background:#253a50;color:#a7d1ff}.badge.todo{background:#343439;color:#bfbfc6}.badge.hold{background:#3d2e4c;color:#d5b2f5}.priority{display:inline-flex;align-items:center;gap:6px}.dot{width:7px;height:7px;border-radius:50%;background:#f2c078}.dot.Urgent{background:#f07878}.dot.High{background:#ef9d64}.dot.Low{background:#6fcf97}.linkbtn{border:0;background:none;color:#c4f2d2;padding:5px}.empty{text-align:center;padding:35px;color:#92929a}.view{display:none}.view.visible{display:block}.modal{position:fixed;inset:0;background:#000b;display:none;place-items:center;padding:15px;z-index:10}.modal.show{display:grid}.dialog{background:#222225;border:1px solid #49494d;border-radius:18px;padding:23px;max-width:620px;width:100%;max-height:90vh;overflow-y:auto}.dialog h2{margin-bottom:17px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.formgrid label,.settings label{display:flex;flex-direction:column;gap:6px;font-size:12px;color:#bcbcc2}.formgrid .wide{grid-column:1/-1}.formgrid .field{width:100%}.formactions{display:flex;justify-content:flex-end;gap:8px;margin-top:20px}.reportlayout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:18px}.settings{display:flex;flex-direction:column;gap:13px}.settings .field{width:100%}.reportframe{overflow:auto;background:#111;border-radius:12px;padding:12px}.reportpage{width:100%;background:#141416;color:#f5f5f7;padding:30px;min-width:0;border:1px solid #343439;line-height:1.5}.reportpage.light{background:#f8fafc;color:#0f172a;border-color:#ddd}.reportpage header{border-bottom:1px solid #5555;padding-bottom:20px;margin-bottom:19px}.reportpage h2{font-size:23px;letter-spacing:-.8px}.reportpage .rstats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin:20px 0}.reportpage .rstat{background:#ffffff0c;border:1px solid #ffffff20;border-radius:9px;padding:10px 6px;text-align:center}.reportpage.light .rstat{background:#fff;border-color:#e1e5e9}.rstat strong{font-size:22px;display:block}.rstat span{font-size:9px;text-transform:uppercase;color:#999}.reportpage h3{font-size:13px;text-transform:uppercase;letter-spacing:1.3px;margin:25px 0 10px;color:#c4f2d2}.reportpage.light h3{color:#235b3a}.reportrow{display:grid;grid-template-columns:1.35fr 1.7fr 1fr .65fr .9fr;gap:8px;padding:9px 0;border-bottom:1px solid #8883;font-size:11px;align-items:center;overflow-wrap:anywhere}.reportrow.head{font-size:9px;color:#aaa;text-transform:uppercase}.reportpage.light .reportrow.head{color:#666}.reportrow .badge{font-size:9px;padding:3px 5px}.reportfoot{margin-top:28px;font-size:10px;color:#92929a;border-top:1px solid #8884;padding-top:12px}.mobilebar{display:none}.notice{position:fixed;right:20px;bottom:20px;background:#c4f2d2;color:#122318;padding:12px 18px;border-radius:10px;z-index:20;display:none}.checkbox{display:flex!important;flex-direction:row!important;align-items:center;gap:8px!important}.checkbox input{accent-color:#c4f2d2}#reportPreview{font-size:12px}.hidden{display:none!important}
 @media(max-width:1100px){.app{grid-template-columns:58px 200px minmax(0,1fr);gap:8px;padding:8px}.sidebar,.rail{top:8px;height:calc(100vh - 16px)}.main{padding:24px 18px}.stats{grid-template-columns:repeat(3,1fr)}.reportlayout{grid-template-columns:1fr}}@media(max-width:760px){.app{display:block;padding:0 0 70px}.rail,.sidebar{display:none}.main{border:0;border-radius:0;padding:23px 14px;min-height:100vh}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.stat{padding:14px}.stat strong{font-size:27px}.mobilebar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:5;background:#171719;border-top:1px solid #343439;justify-content:space-around;padding:6px 0 max(6px,env(safe-area-inset-bottom))}.mobilebar button{background:none;border:0;color:#b7b7be;font-size:11px;padding:7px 5px;min-width:56px}.mobilebar button.active{color:#c4f2d2}.mobilebar span{display:block;font-size:20px;margin-bottom:3px}.formgrid{grid-template-columns:1fr}.reportpage{padding:15px}.reportrow{font-size:9px;gap:4px}.reportpage .rstats{grid-template-columns:repeat(3,1fr)}.reportpage h2{font-size:20px}.mobilecards{display:block!important}.desktoponly{display:none}.taskcard{border-bottom:1px solid #343439;padding:13px 0}.taskcard:last-child{border:0}.taskcard .cardtop{display:flex;justify-content:space-between;gap:8px;margin-bottom:8px}.taskcard .meta{color:#999;font-size:11px;line-height:1.8}.taskcard .cardactions{display:flex;gap:10px;margin-top:8px}.top h1{font-size:27px}}@media(min-width:761px){.mobilecards{display:none!important}}
 
@@ -199,7 +199,7 @@ tr.task-highlight td{background:color-mix(in srgb,var(--task-color) 11%,#fffdf8)
 .outlets-toggle.is-expanded .outlets-chevron{transform:rotate(180deg)}
 #outletTree:not([hidden]){padding-top:5px;padding-bottom:10px}
 
-/* Tracker CTRL v3.5: persistent theme control */
+/* Tracker CTRL v3.6: persistent theme control */
 .theme-switch{position:fixed;right:22px;bottom:20px;z-index:100;display:flex;align-items:center;gap:8px;border:1px solid #d5c3ae;border-radius:999px;background:#fffaf1;color:#705941;padding:11px 16px;box-shadow:0 8px 30px #3c30252e;font-weight:700;font-size:12px;cursor:pointer;transition:transform .2s,background .2s}
 .theme-switch:hover{transform:translateY(-2px)}.theme-switch:focus-visible{outline:3px solid #c7a587;outline-offset:3px}.theme-switch .theme-symbol{font-size:17px}
 @media(max-width:760px){.theme-switch{bottom:calc(82px + env(safe-area-inset-bottom));right:12px;padding:10px 12px}}
@@ -248,7 +248,7 @@ html[data-theme="dark"] .mobilebar{background:#222328!important;border-color:#49
 html[data-theme="dark"] .mobilebar button{color:#c5b6a7!important}html[data-theme="dark"] .mobilebar button.active{color:#e4b991!important}
 html[data-theme="dark"] .theme-switch{background:#39343a;color:#f6d8b8;border-color:#7c6250}
 
-/* Tracker CTRL v3.5: report preview follows the active site theme. */
+/* Tracker CTRL v3.6: report preview follows the active site theme. */
 html[data-theme="light"] .reportframe{background:#efe7dc!important;border-color:#d9cbbb!important}
 html[data-theme="light"] .reportpage{background:#fffbf4!important;color:#3b3029!important;border-color:#dfd1c0!important}
 html[data-theme="light"] .reportpage .rstat{background:#f5ecdf!important;border-color:#e3d2bf!important;color:#3b3029!important}
@@ -520,7 +520,30 @@ pose('idle');setTimeout(()=>say('Hi! Ash and I are here to keep you company. �
   document.getElementById('rTheme')?.addEventListener('change',e=>apply(e.target.value));
   window.addEventListener('tracker-report-refresh',()=>{ if(typeof window.trackerCtrlRefreshReport==='function') window.trackerCtrlRefreshReport(); });
 })();
-</script><script id="trackerCloudIndicatorController">
+</script><style id="trackerV36Controls">
+/* Single consistent cloud/theme control group, never inside the mobile bottom menu. */
+.tracker-utility-bar{position:fixed;right:20px;bottom:20px;z-index:310;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 24px)}
+.tracker-utility-bar .theme-switch{position:static!important;inset:auto!important;bottom:auto!important;right:auto!important;transform:none!important;white-space:nowrap;margin:0!important}
+.tracker-utility-bar .cloud-indicator-wrap{position:static!important;margin:0!important;z-index:auto!important}
+.tracker-utility-bar .cloud-indicator{width:43px;height:43px;background:var(--panel,#f8f3ea);box-shadow:0 4px 14px #0002}
+.tracker-utility-bar .cloud-indicator-popover{position:absolute!important;left:auto!important;right:0!important;top:auto!important;bottom:calc(100% + 12px)!important;width:min(320px,calc(100vw - 32px))!important;max-width:calc(100vw - 32px)!important;max-height:min(70vh,540px);overflow-y:auto;overflow-x:hidden;box-sizing:border-box;transform:none!important;white-space:normal;z-index:400!important}
+.tracker-utility-bar .cloud-open-settings{white-space:normal;overflow-wrap:anywhere;min-height:44px}
+.tracker-utility-bar .cloud-indicator-popover *{max-width:100%;box-sizing:border-box}
+@media(max-width:760px){.tracker-utility-bar{right:12px;bottom:calc(78px + env(safe-area-inset-bottom));gap:8px;z-index:290}.tracker-utility-bar .theme-switch{font-size:12px!important}.tracker-utility-bar .cloud-indicator-popover{bottom:calc(100% + 10px)!important;max-height:50vh}}
+</style>
+<script id="trackerV36ControlLayout">
+(function(){
+ const theme=document.getElementById('themeSwitch');
+ const indicators=[...document.querySelectorAll('.cloud-indicator-wrap')];
+ if(!theme||!indicators.length)return;
+ const bar=document.createElement('div');bar.className='tracker-utility-bar';bar.setAttribute('aria-label','Display and synchronization controls');
+ document.body.appendChild(bar);
+ const primary=indicators[0];
+ indicators.slice(1).forEach(el=>el.remove());
+ bar.appendChild(primary);bar.appendChild(theme);
+})();
+</script>
+<script id="trackerCloudIndicatorController">
 (function(){
  let current={state:'error',message:'Not connected to cloud sync',lastSyncedAt:null};
  const wraps=[...document.querySelectorAll('.cloud-indicator-wrap')];
@@ -543,21 +566,40 @@ const $=id=>document.getElementById(id),panel=$('cloudPanel'),status=$('cloudSta
 const detail=$('cloudDetails'),login=$('cloudLogin'),use=$('cloudUse'),upload=$('cloudUpload'),logout=$('cloudLogout'),userLabel=$('cloudUser');
 let user=null,connected=false,unsubTasks=null,unsubMeta=null,localCache=null,remoteTasks=new Map(),remoteMeta=null,haveTasks=false,haveMeta=false,dirty=new Set(),writeChain=Promise.resolve(),switching=false;
 const bridge=()=>window.trackerCloudBridge;
-let lastSyncedAt=null;
+let lastSyncedAt=null;let applyingRemote=false;let lastAppliedFingerprint=null;
 const publishStatus=(state,message)=>{window.dispatchEvent(new CustomEvent('tracker:cloud-status',{detail:{state,message,lastSyncedAt}}))};
 const setStatus=s=>{status.textContent=s;const synced=/synced across devices/i.test(s);if(synced)lastSyncedAt=new Date().toISOString();const state=synced?'synced':/syncing|uploading|loading|opening google|checking/i.test(s)?'syncing':'error';publishStatus(navigator.onLine?state:'error',navigator.onLine?s:'Offline. Changes are not synced.')} ;
 function buttons(){login.hidden=!!user;logout.hidden=!user;use.hidden=!user||connected;upload.hidden=!user||connected;userLabel.textContent=user?'Signed in: '+(user.email||user.uid):'Not signed in';}
-function stop(){unsubTasks?.();unsubMeta?.();unsubTasks=unsubMeta=null;connected=false;haveTasks=haveMeta=false;remoteTasks.clear();remoteMeta=null;dirty.clear();localCache=null;buttons();}
+function stop(){unsubTasks?.();unsubMeta?.();unsubTasks=unsubMeta=null;connected=false;haveTasks=haveMeta=false;remoteTasks.clear();remoteMeta=null;dirty.clear();localCache=null;lastAppliedFingerprint=null;buttons();}
 function refTasks(){return collection(db,'users',user.uid,'tasks')}
 function refMeta(){return doc(db,'users',user.uid,'settings','tracker')}
 async function loadRemote(){const [ts,ms]=await Promise.all([getDocs(refTasks()),getDoc(refMeta())]);return {tasks:ts.docs.map(d=>d.data()),meta:ms.exists()?ms.data():null}}
 function makeState(){const base=bridge().read();return {tasks:[...remoteTasks.values()],outlets:remoteMeta?.outlets||base.outlets,settings:remoteMeta?.settings||base.settings}}
-function maybeApply(){if(!connected||!haveTasks||!haveMeta||dirty.size)return;const next=makeState();bridge().apply(next);localCache=structuredClone(next);setStatus('● Synced across devices');}
-function listen(){unsubTasks=onSnapshot(refTasks(),snap=>{remoteTasks=new Map(snap.docs.map(d=>[d.id,d.data()]));haveTasks=true;maybeApply()},err=>setStatus('Sync error: '+err.message));unsubMeta=onSnapshot(refMeta(),snap=>{remoteMeta=snap.exists()?snap.data():null;haveMeta=true;maybeApply()},err=>setStatus('Sync error: '+err.message));}
+function maybeApply(){
+ if(!connected||!haveTasks||!haveMeta||dirty.size||applyingRemote)return;
+ const next=makeState(), fingerprint=JSON.stringify(next);
+ if(fingerprint===lastAppliedFingerprint){if(navigator.onLine)setStatus('● Synced across devices');return;}
+ applyingRemote=true;
+ try{bridge().apply(next);localCache=structuredClone(next);lastAppliedFingerprint=fingerprint;if(navigator.onLine)setStatus('● Synced across devices');}
+ finally{applyingRemote=false;}
+}
+function listen(){
+ // Firestore onSnapshot receives updates from other signed-in devices without page refresh.
+ unsubTasks=onSnapshot(refTasks(),{includeMetadataChanges:true},snap=>{
+  remoteTasks=new Map(snap.docs.map(d=>[d.id,d.data()]));haveTasks=true;
+  if(snap.metadata.hasPendingWrites){setStatus('↻ Syncing changes…');return;}
+  maybeApply();
+ },err=>setStatus('Sync error: '+err.message));
+ unsubMeta=onSnapshot(refMeta(),{includeMetadataChanges:true},snap=>{
+  remoteMeta=snap.exists()?snap.data():null;haveMeta=true;
+  if(snap.metadata.hasPendingWrites){setStatus('↻ Syncing changes…');return;}
+  maybeApply();
+ },err=>setStatus('Sync error: '+err.message));
+}
 function enqueue(fn){writeChain=writeChain.then(fn).catch(err=>{console.error(err);setStatus('Sync failed: '+err.message)});return writeChain;}
 window.addEventListener('tracker:local-change',e=>{
- if(!connected||!user||switching||!localCache)return;
- const next=e.detail,prev=localCache;localCache=structuredClone(next);
+ if(!connected||!user||switching||applyingRemote||!localCache)return;
+ const next=e.detail,prev=localCache;localCache=structuredClone(next);lastAppliedFingerprint=null;
  const before=new Map(prev.tasks.map(t=>[String(t.id),t]));const after=new Map(next.tasks.map(t=>[String(t.id),t]));
  const updates=[];
  for(const [id,t] of after){if(JSON.stringify(t)!==JSON.stringify(before.get(id))){dirty.add(id);updates.push({id,t})}}
@@ -570,7 +612,7 @@ window.addEventListener('tracker:local-change',e=>{
   for(let i=0;i<updates.length;i+=300){const batch=writeBatch(db);for(const {id,t} of updates.slice(i,i+300)){const r=doc(refTasks(),id);if(t)batch.set(r,t);else batch.delete(r)}await batch.commit()}
   if(metaChanged)await setDoc(refMeta(),{outlets:next.outlets,settings:next.settings,updatedAt:new Date().toISOString()});
   for(const {id} of updates)dirty.delete(id);
-  if(!dirty.size){setStatus('● Synced across devices');maybeApply()}
+  if(!dirty.size){maybeApply()}
  });
 });
 login.onclick=async()=>{try{setStatus('Opening Google Sign-In…');await signInWithPopup(auth,new GoogleAuthProvider())}catch(e){setStatus('Sign-in failed: '+e.message)}};

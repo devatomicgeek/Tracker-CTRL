@@ -1,19 +1,17 @@
-# Tracker CTRL v3.3 · GitHub Pages
+# Tracker CTRL v3.6
 
-## Publish
-Upload `index.html` and `.nojekyll` to the repository root, then enable **Settings > Pages > Deploy from a branch > main > /(root)**.
+GitHub Pages: upload `index.html` to the root of the existing repository.
 
-## Firebase setup (REQUIRED)
-1. Enable **Authentication > Google** in Firebase Console. Add `YOUR-USERNAME.github.io` under Authentication > Settings > Authorized domains.
-2. Create Firestore in **production mode**. Copy the rules from `firestore.rules` into Firestore > Rules and click Publish. These rules include **both** tasks and settings. The older task-only rules will block synchronization of outlets/settings.
-3. Open the published HTTPS website, expand **Cloud Sync** at the bottom-left and sign in with Google.
-4. **Export JSON backup first** from Settings. On your first device, choose **Upload this device's tasks to cloud** only if the cloud is empty. On your second device, choose **Use cloud tasks on this device**.
-5. Changes are synced to the same Google account. Other Google accounts get separate datasets. The app stays usable locally if signed out, but offline changes made while signed out are not automatically merged into the cloud.
+## Changes
+- Single cloud sync icon aligned with the light/dark theme switch.
+- Mobile cloud popup stays within the viewport and opens above the controls.
+- Firestore real-time snapshot handling and dashboard refresh improvements.
 
-## Important limitations
-- Cloud sync needs internet and the Firebase CDN; opening the HTML with file:// may prevent Google sign-in. GitHub Pages HTTPS is recommended.
-- Each task is a separate Firestore document. Rapid conflicting edits to the **same task** on two devices are last-write-wins. Outlet and profile settings are stored together and likewise last-write-wins.
-- Avoid editing local tasks while waiting for initial cloud selection. Changes made while signed out are local only.
-- Firestore offline persistence is not enabled in this version. When disconnected, local edits remain in this browser, but automatic reconnection merging is not guaranteed. Export a backup before major changes.
-- Firebase web config is public by design. Never commit service-account credentials.
-- Firestore security rules control data access. Anyone with access to your Google account can access your tracker data.
+## Configuration
+- GitHub Pages: no settings change; replace index.html and commit.
+- Firebase Authentication: no change if your GitHub Pages domain is already authorized.
+- Firestore rules: no change if v3.5 read/write permissions already work.
+- Export a JSON backup before upgrading.
+
+## Test
+Sign in on phone and desktop with the same Google account, then change a task status on one device. The other should update without refreshing. Live Firebase connectivity cannot be validated by the package build.
