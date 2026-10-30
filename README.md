@@ -1,17 +1,13 @@
-# Tracker CTRL v3.6
+# Tracker CTRL v3.8
 
-GitHub Pages: upload `index.html` to the root of the existing repository.
+GitHub Pages: upload `index.html` to the existing repository root. No GitHub Pages or Firebase configuration changes are expected if v3.7 already worked.
 
 ## Changes
-- Single cloud sync icon aligned with the light/dark theme switch.
-- Mobile cloud popup stays within the viewport and opens above the controls.
-- Firestore real-time snapshot handling and dashboard refresh improvements.
+- Cloud sync connects automatically after Google sign-in and listens for Firestore changes.
+- Edits save to Firebase and propagate to other signed-in devices.
+- Initial empty cloud with local tasks requires one manual upload to prevent accidental data loss.
+- In-app confirmation dialogs replace browser confirmation dialogs for manual cloud operations.
+- A local pre-cloud backup is stored in localStorage before automatically loading cloud data. Export JSON backups separately for reliable recovery.
 
-## Configuration
-- GitHub Pages: no settings change; replace index.html and commit.
-- Firebase Authentication: no change if your GitHub Pages domain is already authorized.
-- Firestore rules: no change if v3.5 read/write permissions already work.
-- Export a JSON backup before upgrading.
-
-## Test
-Sign in on phone and desktop with the same Google account, then change a task status on one device. The other should update without refreshing. Live Firebase connectivity cannot be validated by the package build.
+## Testing
+Verify on two devices using the same Google account. Browser and live Firebase testing are not included in this build.

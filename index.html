@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tracker CTRL v3.6</title><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tracker CTRL v3.8</title><style>
 :root{font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#f5f5f7;background:#0d0d0f;font-size:14px}*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}.app{display:grid;grid-template-columns:64px 245px minmax(0,1fr);gap:12px;min-height:100vh;padding:15px}.rail,.sidebar,.main{border:1px solid #303034;border-radius:19px;background:#171719}.rail{display:flex;flex-direction:column;align-items:center;gap:12px;padding:16px 7px;position:sticky;top:15px;height:calc(100vh - 30px)}.rail .logo{font-size:27px;color:#c4f2d2;margin-bottom:20px}.icon{border:0;color:#a5a5ab;background:transparent;border-radius:11px;width:44px;height:44px;font-size:20px}.icon.active,.icon:hover{background:#303335;color:#c4f2d2}.rail .bottom{margin-top:auto}.sidebar{padding:23px 14px;position:sticky;top:15px;height:calc(100vh - 30px);overflow-y:auto}.profile{display:flex;gap:10px;align-items:center;padding:8px 6px 25px;border-bottom:1px solid #303034}.avatar{display:grid;place-items:center;border-radius:50%;background:#35443b;color:#c4f2d2;width:38px;height:38px;font-size:17px;font-weight:700}.muted{color:#92929a}.small{font-size:12px}.sectionlabel{font-size:11px;letter-spacing:1.6px;color:#81818b;text-transform:uppercase;margin:25px 8px 9px}.navitem{width:100%;display:flex;align-items:center;justify-content:space-between;gap:7px;text-align:left;border:0;background:transparent;color:#c3c3c9;padding:11px 12px;border-radius:10px}.navitem:hover,.navitem.active{background:#2a2c2c;color:#c4f2d2}.count{color:#a4a4ac;font-size:11px;background:#303034;border-radius:9px;padding:2px 7px}.tree{margin-top:5px}.tree button{width:100%;border:0;background:transparent;color:#b8b8bf;text-align:left;padding:8px 5px;border-radius:8px;display:flex;align-items:center;gap:5px;font-size:12px}.tree button:hover,.tree button.selected{background:#303335;color:#c4f2d2}.tree .twisty{width:13px;flex:none}.tree .tree-count{margin-left:auto;color:#888}.main{min-width:0;padding:30px 34px 70px;background:#19191c}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.eyebrow{text-transform:uppercase;letter-spacing:2px;color:#c4f2d2;font-size:11px;font-weight:700}h1{font-size:32px;letter-spacing:-1.3px;font-weight:600;margin:9px 0 5px}h2{font-size:19px;font-weight:600;margin:0}p{line-height:1.5}.actions{display:flex;gap:9px;flex-wrap:wrap}.btn{border:1px solid #39393e;background:#27272b;color:#f5f5f7;border-radius:10px;padding:11px 15px;font-weight:600}.btn:hover{background:#34343a}.btn.primary{background:#c4f2d2;color:#14231a;border-color:#c4f2d2}.btn.primary:hover{background:#a9dfba}.btn.danger{color:#ffaaaa}.stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;margin:27px 0}.stat,.panel{background:#222225;border:1px solid #343439;border-radius:15px}.stat{padding:18px;min-width:0}.stat .label{font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#a0a0a7}.stat strong{display:block;font-size:33px;font-weight:500;margin:14px 0 4px}.stat small{color:#777781}.panel{padding:20px;margin-bottom:17px}.panelhead{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:17px}.bar{height:9px;border-radius:10px;background:#3a3a3f;overflow:hidden;margin-top:13px}.bar>div{height:100%;background:#c4f2d2;border-radius:10px;transition:width .3s}.toolbar{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:15px}.field{background:#18181b;border:1px solid #3b3b40;color:#eee;border-radius:9px;padding:10px 11px;min-width:0}.toolbar .field{flex:1 1 145px}.tablewrap{overflow-x:auto}table{width:100%;border-collapse:collapse;text-align:left;min-width:670px}th{font-size:10px;text-transform:uppercase;letter-spacing:1.1px;color:#96969e;font-weight:600;border-bottom:1px solid #38383d;padding:13px 11px}td{border-bottom:1px solid #303034;padding:13px 11px;color:#d6d6db;font-size:12px}tr:last-child td{border-bottom:0}td .taskname{font-weight:600;color:#f5f5f7;font-size:13px}.badge{border-radius:7px;padding:5px 8px;display:inline-block;font-size:11px;white-space:nowrap;background:#333}.badge.done{background:#203d2d;color:#91e2ab}.badge.progress{background:#493b26;color:#f2c078}.badge.approval{background:#253a50;color:#a7d1ff}.badge.todo{background:#343439;color:#bfbfc6}.badge.hold{background:#3d2e4c;color:#d5b2f5}.priority{display:inline-flex;align-items:center;gap:6px}.dot{width:7px;height:7px;border-radius:50%;background:#f2c078}.dot.Urgent{background:#f07878}.dot.High{background:#ef9d64}.dot.Low{background:#6fcf97}.linkbtn{border:0;background:none;color:#c4f2d2;padding:5px}.empty{text-align:center;padding:35px;color:#92929a}.view{display:none}.view.visible{display:block}.modal{position:fixed;inset:0;background:#000b;display:none;place-items:center;padding:15px;z-index:10}.modal.show{display:grid}.dialog{background:#222225;border:1px solid #49494d;border-radius:18px;padding:23px;max-width:620px;width:100%;max-height:90vh;overflow-y:auto}.dialog h2{margin-bottom:17px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.formgrid label,.settings label{display:flex;flex-direction:column;gap:6px;font-size:12px;color:#bcbcc2}.formgrid .wide{grid-column:1/-1}.formgrid .field{width:100%}.formactions{display:flex;justify-content:flex-end;gap:8px;margin-top:20px}.reportlayout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:18px}.settings{display:flex;flex-direction:column;gap:13px}.settings .field{width:100%}.reportframe{overflow:auto;background:#111;border-radius:12px;padding:12px}.reportpage{width:100%;background:#141416;color:#f5f5f7;padding:30px;min-width:0;border:1px solid #343439;line-height:1.5}.reportpage.light{background:#f8fafc;color:#0f172a;border-color:#ddd}.reportpage header{border-bottom:1px solid #5555;padding-bottom:20px;margin-bottom:19px}.reportpage h2{font-size:23px;letter-spacing:-.8px}.reportpage .rstats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px;margin:20px 0}.reportpage .rstat{background:#ffffff0c;border:1px solid #ffffff20;border-radius:9px;padding:10px 6px;text-align:center}.reportpage.light .rstat{background:#fff;border-color:#e1e5e9}.rstat strong{font-size:22px;display:block}.rstat span{font-size:9px;text-transform:uppercase;color:#999}.reportpage h3{font-size:13px;text-transform:uppercase;letter-spacing:1.3px;margin:25px 0 10px;color:#c4f2d2}.reportpage.light h3{color:#235b3a}.reportrow{display:grid;grid-template-columns:1.35fr 1.7fr 1fr .65fr .9fr;gap:8px;padding:9px 0;border-bottom:1px solid #8883;font-size:11px;align-items:center;overflow-wrap:anywhere}.reportrow.head{font-size:9px;color:#aaa;text-transform:uppercase}.reportpage.light .reportrow.head{color:#666}.reportrow .badge{font-size:9px;padding:3px 5px}.reportfoot{margin-top:28px;font-size:10px;color:#92929a;border-top:1px solid #8884;padding-top:12px}.mobilebar{display:none}.notice{position:fixed;right:20px;bottom:20px;background:#c4f2d2;color:#122318;padding:12px 18px;border-radius:10px;z-index:20;display:none}.checkbox{display:flex!important;flex-direction:row!important;align-items:center;gap:8px!important}.checkbox input{accent-color:#c4f2d2}#reportPreview{font-size:12px}.hidden{display:none!important}
 @media(max-width:1100px){.app{grid-template-columns:58px 200px minmax(0,1fr);gap:8px;padding:8px}.sidebar,.rail{top:8px;height:calc(100vh - 16px)}.main{padding:24px 18px}.stats{grid-template-columns:repeat(3,1fr)}.reportlayout{grid-template-columns:1fr}}@media(max-width:760px){.app{display:block;padding:0 0 70px}.rail,.sidebar{display:none}.main{border:0;border-radius:0;padding:23px 14px;min-height:100vh}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.stat{padding:14px}.stat strong{font-size:27px}.mobilebar{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:5;background:#171719;border-top:1px solid #343439;justify-content:space-around;padding:6px 0 max(6px,env(safe-area-inset-bottom))}.mobilebar button{background:none;border:0;color:#b7b7be;font-size:11px;padding:7px 5px;min-width:56px}.mobilebar button.active{color:#c4f2d2}.mobilebar span{display:block;font-size:20px;margin-bottom:3px}.formgrid{grid-template-columns:1fr}.reportpage{padding:15px}.reportrow{font-size:9px;gap:4px}.reportpage .rstats{grid-template-columns:repeat(3,1fr)}.reportpage h2{font-size:20px}.mobilecards{display:block!important}.desktoponly{display:none}.taskcard{border-bottom:1px solid #343439;padding:13px 0}.taskcard:last-child{border:0}.taskcard .cardtop{display:flex;justify-content:space-between;gap:8px;margin-bottom:8px}.taskcard .meta{color:#999;font-size:11px;line-height:1.8}.taskcard .cardactions{display:flex;gap:10px;margin-top:8px}.top h1{font-size:27px}}@media(min-width:761px){.mobilecards{display:none!important}}
 
@@ -199,7 +199,7 @@ tr.task-highlight td{background:color-mix(in srgb,var(--task-color) 11%,#fffdf8)
 .outlets-toggle.is-expanded .outlets-chevron{transform:rotate(180deg)}
 #outletTree:not([hidden]){padding-top:5px;padding-bottom:10px}
 
-/* Tracker CTRL v3.6: persistent theme control */
+/* Tracker CTRL v3.8: persistent theme control */
 .theme-switch{position:fixed;right:22px;bottom:20px;z-index:100;display:flex;align-items:center;gap:8px;border:1px solid #d5c3ae;border-radius:999px;background:#fffaf1;color:#705941;padding:11px 16px;box-shadow:0 8px 30px #3c30252e;font-weight:700;font-size:12px;cursor:pointer;transition:transform .2s,background .2s}
 .theme-switch:hover{transform:translateY(-2px)}.theme-switch:focus-visible{outline:3px solid #c7a587;outline-offset:3px}.theme-switch .theme-symbol{font-size:17px}
 @media(max-width:760px){.theme-switch{bottom:calc(82px + env(safe-area-inset-bottom));right:12px;padding:10px 12px}}
@@ -248,7 +248,7 @@ html[data-theme="dark"] .mobilebar{background:#222328!important;border-color:#49
 html[data-theme="dark"] .mobilebar button{color:#c5b6a7!important}html[data-theme="dark"] .mobilebar button.active{color:#e4b991!important}
 html[data-theme="dark"] .theme-switch{background:#39343a;color:#f6d8b8;border-color:#7c6250}
 
-/* Tracker CTRL v3.6: report preview follows the active site theme. */
+/* Tracker CTRL v3.8: report preview follows the active site theme. */
 html[data-theme="light"] .reportframe{background:#efe7dc!important;border-color:#d9cbbb!important}
 html[data-theme="light"] .reportpage{background:#fffbf4!important;color:#3b3029!important;border-color:#dfd1c0!important}
 html[data-theme="light"] .reportpage .rstat{background:#f5ecdf!important;border-color:#e3d2bf!important;color:#3b3029!important}
@@ -388,7 +388,82 @@ window.addEventListener('ash:task-restored',()=>{pose('think');say('That task is
 idleTimer=setInterval(()=>{if(document.hidden)return;if(Date.now()-lastSpoke>95000&&Math.random()<.38){pose('blink',1100);say(phrases[nextPhrase++%phrases.length],4700)}else if(Math.random()<.5)pose(['blink','sip','work','think','smile','walk1'][Math.floor(Math.random()*6)],2100)},22000);
 pose('idle');setTimeout(()=>say('Hi! Ash and I are here to keep you company. 🌸',6500),2800);
 })();
-<\/script></body></html>`);w.document.close()}document.addEventListener('change',e=>{const control=e.target.closest('[data-task-status]');if(control){const inDetails=!!control.closest('#detailsModal');const taskId=control.dataset.taskStatus;quickStatus(taskId,control.value);if(inDetails)openDetails(taskId)}});document.addEventListener('click',e=>{const row=e.target.closest('[data-open-details]');if(row&&!e.target.closest('button,select,input,a,textarea'))openDetails(row.dataset.openDetails)});document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-open-details]')){e.preventDefault();openDetails(e.target.dataset.openDetails)}if(e.key==='Escape')closeDetails()});$('#closeDetails').onclick=$('#dismissDetails').onclick=closeDetails;$('#detailsModal').addEventListener('click',e=>{if(e.target.id==='detailsModal')closeDetails()});$('#completeFromDetails').onclick=()=>{const id=$('#completeFromDetails').dataset.completeDetails;const t=data.tasks.find(x=>x.id===id);if(!t)return;const next=t.status==='Done'?'To Be Done':'Done';quickStatus(id,next);closeDetails()};$('#editFromDetails').onclick=()=>{const id=$('#editFromDetails').dataset.editDetails;closeDetails();openTask(id)};document.addEventListener('click',e=>{const view=e.target.closest('[data-view]');if(view){showView(view.dataset.view);return}if(e.target.closest('[data-add]')){openTask();return}const unarchive=e.target.closest('[data-unarchive]');if(unarchive){unarchiveTask(unarchive.dataset.unarchive);return}const edit=e.target.closest('[data-edit]');if(edit){openTask(edit.dataset.edit);return}const toggle=e.target.closest('[data-toggle]');if(toggle){let id=toggle.dataset.toggle;expanded.has(id)?expanded.delete(id):expanded.add(id);renderTree();return}const out=e.target.closest('[data-outlet]');if(out){selectedOutlet=out.dataset.outlet;selectedStatus='';showView('tasks');renderAll();return}const sn=e.target.closest('[data-statusnav]');if(sn){selectedStatus=sn.dataset.statusnav;showView(selectedStatus==='Done'?'done':'tasks');renderAll();return}const ren=e.target.closest('[data-rename]');if(ren){let o=getLoc(ren.dataset.rename),name=prompt('Rename location:',o.name);if(name?.trim()){o.name=name.trim();save();renderAll()}return}const rem=e.target.closest('[data-removeoutlet]');if(rem){removeLocation(rem.dataset.removeoutlet);return}});$('#allOutlets').onclick=()=>{outletsOpen=!outletsOpen;selectedOutlet='';selectedStatus='';showView('tasks');renderAll()};$('#addOutlet').onclick=addLocation;$('#settingsAddOutlet').onclick=addLocation;$('#locationType').addEventListener('change',updateLocationParents);$('#locationForm').addEventListener('submit',saveLocation);$('#closeLocation').onclick=$('#cancelLocation').onclick=closeLocation;$('#locationModal').addEventListener('click',e=>{if(e.target.id==='locationModal')closeLocation()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLocation()});$('#fOutlet').onchange=()=>updateSub();$('#fSub').onchange=()=>updateRoom();$('#taskForm').onsubmit=taskSave;$('#closeTask').onclick=$('#cancelTask').onclick=()=>$('#taskModal').classList.remove('show');$('#taskModal').addEventListener('click',e=>{if(e.target.id==='taskModal')$('#taskModal').classList.remove('show')});$('#deleteTask').onclick=()=>{if(!editing||!confirm('Delete this task permanently?'))return;data.tasks=data.tasks.filter(t=>t.id!==editing);save();$('#taskModal').classList.remove('show');renderAll();toast('Task deleted')};['searchTasks','priorityFilter','statusFilter'].forEach(id=>$('#'+id).addEventListener('input',renderTasks));$('#clearFilters').onclick=()=>{$('#searchTasks').value='';$('#priorityFilter').value='';$('#statusFilter').value='';selectedOutlet='';selectedStatus='';renderAll()};['rTitle','rPeriod','rStart','rEnd','rOutlet','rPriority','rTheme','rOrientation','rSummary','rActive','rDone','rGroup'].forEach(id=>$('#'+id).addEventListener('input',()=>{$('#customDates').classList.toggle('hidden',$('#rPeriod').value!=='custom');renderReport()}));$('#finalizeReport').onclick=finalizeReport;$('#completeAllDone').onclick=completeAllDone;$('#saveSettings').onclick=()=>{data.settings={name:$('#sName').value.trim()||'Creative Workspace',role:$('#sRole').value.trim()||'Graphic Designer',company:$('#sCompany').value.trim()};save();renderAll();toast('Settings saved')};function exportData(){try{const payload={format:'creative-task-tracker-backup',version:1,exportedAt:new Date().toISOString(),data:{tasks:data.tasks,outlets:data.outlets,settings:data.settings}};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='creative-task-tracker-backup-'+today()+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);toast('Backup exported')}catch(err){console.error(err);toast('Unable to export backup')}}
+<\/script>
+<style id="trackerV37Styles">
+#companionReminderSettings{max-width:650px;margin-top:18px;padding:22px;border:1px solid var(--border,#c3b5a2);border-radius:20px;background:var(--card,#29292d);color:inherit}
+#companionReminderSettings h2{margin:0 0 8px;font-size:20px}#companionReminderSettings p{opacity:.75;font-size:13px;line-height:1.5}
+#companionReminderSettings .reminder-row{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:11px 0;border-bottom:1px solid #8883;font-size:14px}
+#companionReminderSettings input[type=checkbox]{width:20px;height:20px;accent-color:#b89a77;flex-shrink:0}
+#companionReminderSettings select{min-height:42px;border-radius:9px;background:var(--card,#29292d);color:inherit;border:1px solid #8886;padding:7px}
+#companionReminderSettings .reminder-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
+#companionReminderSettings button{min-height:42px;padding:8px 14px;border-radius:11px;border:1px solid #a78b69;background:#b99b78;color:#201b17;font-weight:600;cursor:pointer}
+#cloudPanel{scroll-margin-top:22px}#cloudPanel.cloud-target-highlight{outline:3px solid #caa77d;outline-offset:4px;transition:outline-color 1s}
+@media(max-width:760px){#companionReminderSettings{padding:16px;margin-bottom:90px}.person-speech,.cat-speech{max-width:min(230px,calc(100vw - 40px))!important;overflow-wrap:anywhere}}
+</style>
+<script id="trackerV37CompanionReminders">
+(function(){
+ 'use strict';
+ const KEY='trackerCTRLCompanionReminderPrefsV37';
+ const defaults={enabled:true,frequency:15,deadlines:true,reactions:true,casual:true};
+ let prefs;try{prefs={...defaults,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{prefs={...defaults}}
+ const readTasks=()=>{try{return window.trackerCloudBridge?.read()?.tasks||[]}catch{return []}};
+ const localDay=d=>{if(!/^\d{4}-\d\d-\d\d$/.test(String(d||'')))return null;const [y,m,day]=d.split('-').map(Number);const date=new Date(y,m-1,day);return date.getFullYear()===y&&date.getMonth()===m-1&&date.getDate()===day?date:null};
+ const dayDiff=d=>{const a=localDay(d);if(!a)return null;const now=new Date();const today=new Date(now.getFullYear(),now.getMonth(),now.getDate());return Math.round((a-today)/86400000)};
+ const active=()=>readTasks().filter(t=>t&&t.status!=='Done'&&t.status!=='On Hold'&&!t.archived&&!t.finalized);
+ function summary(){const tasks=active();const overdue=tasks.filter(t=>dayDiff(t.deadline)!==null&&dayDiff(t.deadline)<0);const due=tasks.filter(t=>dayDiff(t.deadline)===0);const tomorrow=tasks.filter(t=>dayDiff(t.deadline)===1);const urgent=tasks.filter(t=>String(t.priority).toLowerCase()==='urgent');return {tasks,overdue,due,tomorrow,urgent}}
+ function reminder(who){const {tasks,overdue,due,tomorrow,urgent}=summary();const title=t=>String(t?.title||'a task').slice(0,54);
+  if(prefs.deadlines){if(overdue.length)return who==='ash'?`Meow! ${overdue.length} overdue task${overdue.length===1?'':'s'} need attention. 🐾`:`${overdue.length} overdue task${overdue.length===1?'':'s'}. Start with “${title(overdue[0])}”.`;
+  if(due.length)return who==='ash'?`Psst! “${title(due[0])}” is due today! 🐾`:`${due.length} task${due.length===1?' is':'s are'} due today, including “${title(due[0])}”.`;
+  if(tomorrow.length)return who==='ash'?`Tomorrow's deadline: “${title(tomorrow[0])}”.`:`“${title(tomorrow[0])}” is due tomorrow. A little progress today will help.`;
+  if(urgent.length)return who==='ash'?`Meow! ${urgent.length} urgent task${urgent.length===1?'':'s'} on the list!`:`${urgent.length} urgent task${urgent.length===1?' needs':'s need'} attention. “${title(urgent[0])}” is one of them.`;}
+  if(!tasks.length)return who==='ash'?'All clear. Nap time! 🐱':'No active tasks right now. Enjoy the breathing room!';
+  return who==='ash'?`${tasks.length} active tasks. I am supervising. 🐾`:`You have ${tasks.length} active tasks. One at a time!`;
+ }
+ let lastShown=0,turn=0,hideTimer=null;
+ function speak(who,message,force=false){if(!prefs.enabled||document.hidden)return;if(!force&&Date.now()-lastShown<9000)return;const id=who==='ash'?'catSpeech':'personSpeech';const el=document.getElementById(id);if(!el)return;
+  for(const other of ['catSpeech','personSpeech'])if(other!==id)document.getElementById(other)?.classList.remove('show');
+  el.textContent=message;el.classList.add('show');lastShown=Date.now();clearTimeout(hideTimer);hideTimer=setTimeout(()=>el.classList.remove('show'),6500);
+ }
+ function notify(){if(!prefs.enabled||!prefs.deadlines)return;const who=turn++%2?'ash':'wifey';speak(who,reminder(who))}
+ let interval;
+ function schedule(){clearInterval(interval);interval=setInterval(()=>{if(prefs.enabled&&(prefs.deadlines||prefs.casual))notify()},Math.max(5,Number(prefs.frequency)||15)*60000)}
+ function save(){try{localStorage.setItem(KEY,JSON.stringify(prefs))}catch{}schedule()}
+ const panel=document.createElement('section');panel.id='companionReminderSettings';panel.innerHTML=`<h2>🐱💕 Companion Reminders</h2><p>Wifey and Ash check your real task deadlines while Tracker CTRL is open. No background push notifications.</p>
+ <label class="reminder-row">Enable companion reminders <input type="checkbox" data-pref="enabled"></label>
+ <label class="reminder-row">Reminder frequency <select data-pref="frequency"><option value="5">Every 5 minutes</option><option value="15">Every 15 minutes</option><option value="30">Every 30 minutes</option></select></label>
+ <label class="reminder-row">Deadline and overdue reminders <input type="checkbox" data-pref="deadlines"></label>
+ <label class="reminder-row">Task completion and status reactions <input type="checkbox" data-pref="reactions"></label>
+ <label class="reminder-row">Casual check-ins <input type="checkbox" data-pref="casual"></label>
+ <div class="reminder-actions"><button type="button" id="companionTestWifey">Ask Wifey</button><button type="button" id="companionTestAsh">Ask Ash</button></div>`;
+ const settings=document.getElementById('view-settings');if(settings){settings.appendChild(panel);panel.querySelectorAll('[data-pref]').forEach(el=>{const key=el.dataset.pref;if(el.type==='checkbox')el.checked=!!prefs[key];else el.value=String(prefs[key]);el.addEventListener('change',()=>{prefs[key]=el.type==='checkbox'?el.checked:Number(el.value);save()})});}
+ document.getElementById('companionTestWifey')?.addEventListener('click',()=>speak('wifey',reminder('wifey'),true));
+ document.getElementById('companionTestAsh')?.addEventListener('click',()=>speak('ash',reminder('ash'),true));
+ // Capture navigation before the older click handler sends users only to the top of Settings.
+ document.querySelectorAll('.cloud-open-settings').forEach(button=>button.addEventListener('click',event=>{
+   event.preventDefault();event.stopImmediatePropagation();
+   const nav=document.querySelector('[data-view="settings"]');if(nav)nav.click();
+   document.querySelectorAll('.cloud-indicator-popover').forEach(pop=>pop.hidden=true);
+   const cloud=document.getElementById('cloudPanel');if(!cloud)return;
+   cloud.hidden=false;cloud.classList.remove('hidden');
+   const details=document.getElementById('cloudDetails');if(details)details.hidden=false;
+   requestAnimationFrame(()=>setTimeout(()=>{cloud.scrollIntoView({behavior:'smooth',block:'start'});cloud.classList.add('cloud-target-highlight');setTimeout(()=>cloud.classList.remove('cloud-target-highlight'),2200)},120));
+ },true));
+ // React to changes already emitted by the tracker, without modifying its save logic.
+ window.addEventListener('ash:task-change',e=>{if(!prefs.enabled||!prefs.reactions)return;const d=e.detail||{};const name=String(d.title||'the task').slice(0,50);if(d.created){speak('wifey',`“${name}” is on the list. Let's make progress!`,true);return}if(d.status===d.previousStatus)return;
+  const messages={'Done':`“${name}” is done! One less task. ✨`,'On Hold':`“${name}” is on hold. I'll keep an eye on it.`,'For Approval':`“${name}” is awaiting approval.`,'In Progress':`“${name}” is in progress. You've got this!`,'To Be Done':`“${name}” is ready when you are.`};if(messages[d.status])speak(d.status==='On Hold'?'ash':'wifey',messages[d.status],true);
+ });
+ window.addEventListener('ash:tasks-finalized',e=>{if(prefs.enabled&&prefs.reactions)speak('ash',`${e.detail?.count||1} task(s) archived. Meow! 🐾`,true)});
+ document.getElementById('personInteract')?.addEventListener('click',()=>{if(prefs.enabled)speak('wifey',reminder('wifey'),true)},true);
+ document.getElementById('catInteract')?.addEventListener('click',()=>{if(prefs.enabled)speak('ash',reminder('ash'),true)},true);
+ schedule();setTimeout(()=>{if(prefs.enabled&&prefs.deadlines&&summary().tasks.length)notify()},12500);
+})();
+</script>
+<style id="trackerV38Styles">
+.cloud-confirm-overlay[hidden]{display:none!important}.cloud-confirm-overlay{position:fixed;inset:0;z-index:99999;background:rgba(12,12,15,.66);display:grid;place-items:center;padding:18px;box-sizing:border-box}
+.cloud-confirm-dialog{box-sizing:border-box;width:min(100%,460px);max-height:calc(100dvh - 36px);overflow:auto;background:var(--card,#29292d);color:var(--text,#f5ede4);border:1px solid #bda58b88;border-radius:22px;padding:26px;box-shadow:0 22px 80px #0007}
+.cloud-confirm-icon{font-size:28px}.cloud-confirm-dialog h2{font-size:23px;margin:12px 0}.cloud-confirm-dialog p{line-height:1.55;overflow-wrap:anywhere;opacity:.85;font-size:15px}.cloud-confirm-actions{display:flex;gap:12px;justify-content:flex-end;flex-wrap:wrap;margin-top:24px}.cloud-confirm-actions button{min-height:44px;border-radius:12px;padding:10px 17px;border:1px solid #bda58b77;cursor:pointer;font-size:15px}.cloud-confirm-actions #cloudConfirmCancel{background:transparent;color:inherit}.cloud-confirm-actions #cloudConfirmAccept{background:#b99b78;color:#211c18;font-weight:700}
+@media(max-width:500px){.cloud-confirm-dialog{padding:21px}.cloud-confirm-actions button{flex:1}}
+</style><div id="cloudConfirmOverlay" class="cloud-confirm-overlay" hidden role="presentation"><section class="cloud-confirm-dialog" role="dialog" aria-modal="true" aria-labelledby="cloudConfirmTitle" aria-describedby="cloudConfirmMessage"><div class="cloud-confirm-icon">☁</div><h2 id="cloudConfirmTitle">Cloud Sync</h2><p id="cloudConfirmMessage"></p><div class="cloud-confirm-actions"><button type="button" id="cloudConfirmCancel">Cancel</button><button type="button" id="cloudConfirmAccept">Continue</button></div></section></div></body></html>`);w.document.close()}document.addEventListener('change',e=>{const control=e.target.closest('[data-task-status]');if(control){const inDetails=!!control.closest('#detailsModal');const taskId=control.dataset.taskStatus;quickStatus(taskId,control.value);if(inDetails)openDetails(taskId)}});document.addEventListener('click',e=>{const row=e.target.closest('[data-open-details]');if(row&&!e.target.closest('button,select,input,a,textarea'))openDetails(row.dataset.openDetails)});document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-open-details]')){e.preventDefault();openDetails(e.target.dataset.openDetails)}if(e.key==='Escape')closeDetails()});$('#closeDetails').onclick=$('#dismissDetails').onclick=closeDetails;$('#detailsModal').addEventListener('click',e=>{if(e.target.id==='detailsModal')closeDetails()});$('#completeFromDetails').onclick=()=>{const id=$('#completeFromDetails').dataset.completeDetails;const t=data.tasks.find(x=>x.id===id);if(!t)return;const next=t.status==='Done'?'To Be Done':'Done';quickStatus(id,next);closeDetails()};$('#editFromDetails').onclick=()=>{const id=$('#editFromDetails').dataset.editDetails;closeDetails();openTask(id)};document.addEventListener('click',e=>{const view=e.target.closest('[data-view]');if(view){showView(view.dataset.view);return}if(e.target.closest('[data-add]')){openTask();return}const unarchive=e.target.closest('[data-unarchive]');if(unarchive){unarchiveTask(unarchive.dataset.unarchive);return}const edit=e.target.closest('[data-edit]');if(edit){openTask(edit.dataset.edit);return}const toggle=e.target.closest('[data-toggle]');if(toggle){let id=toggle.dataset.toggle;expanded.has(id)?expanded.delete(id):expanded.add(id);renderTree();return}const out=e.target.closest('[data-outlet]');if(out){selectedOutlet=out.dataset.outlet;selectedStatus='';showView('tasks');renderAll();return}const sn=e.target.closest('[data-statusnav]');if(sn){selectedStatus=sn.dataset.statusnav;showView(selectedStatus==='Done'?'done':'tasks');renderAll();return}const ren=e.target.closest('[data-rename]');if(ren){let o=getLoc(ren.dataset.rename),name=prompt('Rename location:',o.name);if(name?.trim()){o.name=name.trim();save();renderAll()}return}const rem=e.target.closest('[data-removeoutlet]');if(rem){removeLocation(rem.dataset.removeoutlet);return}});$('#allOutlets').onclick=()=>{outletsOpen=!outletsOpen;selectedOutlet='';selectedStatus='';showView('tasks');renderAll()};$('#addOutlet').onclick=addLocation;$('#settingsAddOutlet').onclick=addLocation;$('#locationType').addEventListener('change',updateLocationParents);$('#locationForm').addEventListener('submit',saveLocation);$('#closeLocation').onclick=$('#cancelLocation').onclick=closeLocation;$('#locationModal').addEventListener('click',e=>{if(e.target.id==='locationModal')closeLocation()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLocation()});$('#fOutlet').onchange=()=>updateSub();$('#fSub').onchange=()=>updateRoom();$('#taskForm').onsubmit=taskSave;$('#closeTask').onclick=$('#cancelTask').onclick=()=>$('#taskModal').classList.remove('show');$('#taskModal').addEventListener('click',e=>{if(e.target.id==='taskModal')$('#taskModal').classList.remove('show')});$('#deleteTask').onclick=()=>{if(!editing||!confirm('Delete this task permanently?'))return;data.tasks=data.tasks.filter(t=>t.id!==editing);save();$('#taskModal').classList.remove('show');renderAll();toast('Task deleted')};['searchTasks','priorityFilter','statusFilter'].forEach(id=>$('#'+id).addEventListener('input',renderTasks));$('#clearFilters').onclick=()=>{$('#searchTasks').value='';$('#priorityFilter').value='';$('#statusFilter').value='';selectedOutlet='';selectedStatus='';renderAll()};['rTitle','rPeriod','rStart','rEnd','rOutlet','rPriority','rTheme','rOrientation','rSummary','rActive','rDone','rGroup'].forEach(id=>$('#'+id).addEventListener('input',()=>{$('#customDates').classList.toggle('hidden',$('#rPeriod').value!=='custom');renderReport()}));$('#finalizeReport').onclick=finalizeReport;$('#completeAllDone').onclick=completeAllDone;$('#saveSettings').onclick=()=>{data.settings={name:$('#sName').value.trim()||'Creative Workspace',role:$('#sRole').value.trim()||'Graphic Designer',company:$('#sCompany').value.trim()};save();renderAll();toast('Settings saved')};function exportData(){try{const payload={format:'creative-task-tracker-backup',version:1,exportedAt:new Date().toISOString(),data:{tasks:data.tasks,outlets:data.outlets,settings:data.settings}};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='creative-task-tracker-backup-'+today()+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);toast('Backup exported')}catch(err){console.error(err);toast('Unable to export backup')}}
 function validBackup(obj){if(!obj||typeof obj!=='object'||Array.isArray(obj))return null;const d=obj.format==='creative-task-tracker-backup'&&obj.version===1?obj.data:obj;if(!d||!Array.isArray(d.tasks)||!Array.isArray(d.outlets)||!d.settings||typeof d.settings!=='object'||Array.isArray(d.settings))return null;if(d.tasks.length>100000||d.outlets.length>10000)return null;const ids=new Set();for(const o of d.outlets){if(!o||typeof o.id!=='string'||!o.id||typeof o.name!=='string'||o.name.length>300||ids.has(o.id)||!(o.parent===null||o.parent===undefined||typeof o.parent==='string'))return null;ids.add(o.id)}for(const o of d.outlets){if(o.parent!=null&&!ids.has(o.parent))return null;let seen=new Set(),cur=o;while(cur&&cur.parent!=null){if(seen.has(cur.id))return null;seen.add(cur.id);cur=d.outlets.find(x=>x.id===cur.parent)}}const taskIds=new Set();for(const t of d.tasks){if(!t||typeof t.id!=='string'||!t.id||taskIds.has(t.id)||typeof t.title!=='string'||typeof t.status!=='string'||(t.outletId&&!ids.has(t.outletId)))return null;taskIds.add(t.id)}return {tasks:d.tasks,outlets:d.outlets,settings:{name:String(d.settings.name||'Creative Workspace'),role:String(d.settings.role||'Graphic Designer'),company:String(d.settings.company||'')}}}
 async function importData(file){if(!file)return;try{if(file.size>25*1024*1024)throw Error('Backup exceeds 25 MB');const text=await file.text();const parsed=validBackup(JSON.parse(text));if(!parsed)throw Error('Invalid or incompatible Creative Task Tracker backup');if(!confirm('Import '+parsed.tasks.length+' tasks and '+parsed.outlets.length+' locations? This will REPLACE all tasks, outlets and profile settings currently saved in this browser. Export your current data first if you want to keep it.'))return;const serialized=JSON.stringify(parsed);localStorage.setItem(KEY,serialized);data=parsed;selectedOutlet='';selectedStatus='';editing=null;expanded=new Set(data.outlets.filter(o=>o.parent===null).map(o=>o.id));$('#sName').value=data.settings.name;$('#sRole').value=data.settings.role;$('#sCompany').value=data.settings.company;$('#taskModal').classList.remove('show');$('#detailsModal').classList.remove('show');renderAll();window.dispatchEvent(new CustomEvent('tracker:local-change',{detail:structuredClone(data)}));toast('Imported '+data.tasks.length+' tasks successfully')}catch(err){console.error(err);alert('Import failed: '+err.message+'\nYour existing data has not been changed.')}finally{$('#backupFile').value=''}}
 $('#exportBackup').addEventListener('click',exportData);$('#importBackup').addEventListener('click',()=>$('#backupFile').click());$('#backupFile').addEventListener('change',e=>importData(e.target.files[0]));
@@ -559,85 +634,194 @@ pose('idle');setTimeout(()=>say('Hi! Ash and I are here to keep you company. �
 </script><script type="module" id="trackerCloudModule">
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js';
 import {getAuth,GoogleAuthProvider,signInWithPopup,signOut,onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js';
-import {getFirestore,collection,doc,getDocs,getDoc,onSnapshot,setDoc,deleteDoc,writeBatch} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
+import {getFirestore,collection,doc,getDocs,getDoc,onSnapshot,setDoc,writeBatch} from 'https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js';
 const config={apiKey:'AIzaSyCS7OwyGw0uMVH8eurmiHKSE5R83cu1b_g',authDomain:'tracker-ctrl.firebaseapp.com',projectId:'tracker-ctrl',storageBucket:'tracker-ctrl.firebasestorage.app',messagingSenderId:'463857936066',appId:'1:463857936066:web:0cb151644472c0b2c0bd5b',measurementId:'G-18Z68EN7LL'};
 const app=initializeApp(config),auth=getAuth(app),db=getFirestore(app);
-const $=id=>document.getElementById(id),panel=$('cloudPanel'),status=$('cloudStatus');
-const detail=$('cloudDetails'),login=$('cloudLogin'),use=$('cloudUse'),upload=$('cloudUpload'),logout=$('cloudLogout'),userLabel=$('cloudUser');
-let user=null,connected=false,unsubTasks=null,unsubMeta=null,localCache=null,remoteTasks=new Map(),remoteMeta=null,haveTasks=false,haveMeta=false,dirty=new Set(),writeChain=Promise.resolve(),switching=false;
+const $=id=>document.getElementById(id);
+const status=$('cloudStatus'),login=$('cloudLogin'),use=$('cloudUse'),upload=$('cloudUpload'),logout=$('cloudLogout'),userLabel=$('cloudUser');
 const bridge=()=>window.trackerCloudBridge;
-let lastSyncedAt=null;let applyingRemote=false;let lastAppliedFingerprint=null;
-const publishStatus=(state,message)=>{window.dispatchEvent(new CustomEvent('tracker:cloud-status',{detail:{state,message,lastSyncedAt}}))};
-const setStatus=s=>{status.textContent=s;const synced=/synced across devices/i.test(s);if(synced)lastSyncedAt=new Date().toISOString();const state=synced?'synced':/syncing|uploading|loading|opening google|checking/i.test(s)?'syncing':'error';publishStatus(navigator.onLine?state:'error',navigator.onLine?s:'Offline. Changes are not synced.')} ;
+let user=null,connected=false,unsubTasks=null,unsubMeta=null,remoteTasks=new Map(),remoteMeta=null,haveTasks=false,haveMeta=false;
+let localCache=null,dirty=new Set(),metaDirty=false,writeChain=Promise.resolve(),applyingRemote=false,booting=false;
+let pendingWrites=false,taskPending=false,metaPending=false,lastSyncedAt=null,session=0;
+const clone=v=>structuredClone(v);
+function publish(state,message){status.textContent=message;window.dispatchEvent(new CustomEvent('tracker:cloud-status',{detail:{state,message,lastSyncedAt}}));}
+function markSynced(){if(!navigator.onLine){publish('error','Offline. Changes are waiting for connection.');return}lastSyncedAt=new Date().toISOString();publish('synced','● Synced across devices');}
 function buttons(){login.hidden=!!user;logout.hidden=!user;use.hidden=!user||connected;upload.hidden=!user||connected;userLabel.textContent=user?'Signed in: '+(user.email||user.uid):'Not signed in';}
-function stop(){unsubTasks?.();unsubMeta?.();unsubTasks=unsubMeta=null;connected=false;haveTasks=haveMeta=false;remoteTasks.clear();remoteMeta=null;dirty.clear();localCache=null;lastAppliedFingerprint=null;buttons();}
-function refTasks(){return collection(db,'users',user.uid,'tasks')}
-function refMeta(){return doc(db,'users',user.uid,'settings','tracker')}
-async function loadRemote(){const [ts,ms]=await Promise.all([getDocs(refTasks()),getDoc(refMeta())]);return {tasks:ts.docs.map(d=>d.data()),meta:ms.exists()?ms.data():null}}
-function makeState(){const base=bridge().read();return {tasks:[...remoteTasks.values()],outlets:remoteMeta?.outlets||base.outlets,settings:remoteMeta?.settings||base.settings}}
-function maybeApply(){
- if(!connected||!haveTasks||!haveMeta||dirty.size||applyingRemote)return;
- const next=makeState(), fingerprint=JSON.stringify(next);
- if(fingerprint===lastAppliedFingerprint){if(navigator.onLine)setStatus('● Synced across devices');return;}
- applyingRemote=true;
- try{bridge().apply(next);localCache=structuredClone(next);lastAppliedFingerprint=fingerprint;if(navigator.onLine)setStatus('● Synced across devices');}
- finally{applyingRemote=false;}
+function stop(){session++;unsubTasks?.();unsubMeta?.();unsubTasks=unsubMeta=null;connected=false;haveTasks=haveMeta=false;remoteTasks.clear();remoteMeta=null;dirty.clear();metaDirty=false;localCache=null;pendingWrites=false;taskPending=metaPending=false;booting=false;writeChain=Promise.resolve();buttons();}
+function tasksRef(){return collection(db,'users',user.uid,'tasks')}
+function metaRef(){return doc(db,'users',user.uid,'settings','tracker')}
+async function remoteRead(){const [ts,ms]=await Promise.all([getDocs(tasksRef()),getDoc(metaRef())]);return {tasks:ts.docs.map(d=>d.data()),meta:ms.exists()?ms.data():null};}
+function backupLocal(){try{const state=bridge().read();localStorage.setItem('trackerCTRL_v38_precloud_backup_'+user.uid,JSON.stringify({savedAt:new Date().toISOString(),state}));}catch(e){console.warn('Could not create pre-sync backup',e)}}
+function stateFromRemote(){const base=bridge().read();return {tasks:[...remoteTasks.values()],outlets:remoteMeta?.outlets||base.outlets,settings:remoteMeta?.settings||base.settings};}
+function applyRemote(){if(!connected||!haveTasks||!haveMeta||applyingRemote)return;
+ const next=stateFromRemote(),current=bridge().read();
+ // Keep local edits that are waiting for Firestore acknowledgement.
+ const existing=new Map(current.tasks.map(t=>[String(t.id),t]));
+ const merged=new Map(next.tasks.map(t=>[String(t.id),t]));
+ for(const id of dirty){if(existing.has(id))merged.set(id,existing.get(id));else merged.delete(id)}
+ next.tasks=[...merged.values()];
+ if(metaDirty){next.outlets=current.outlets;next.settings=current.settings}
+ if(JSON.stringify(next)!==JSON.stringify(current)){
+  applyingRemote=true;try{bridge().apply(next)}finally{applyingRemote=false}
+ }
+ if(!dirty.size&&!metaDirty&&!pendingWrites)markSynced();
 }
-function listen(){
- // Firestore onSnapshot receives updates from other signed-in devices without page refresh.
- unsubTasks=onSnapshot(refTasks(),{includeMetadataChanges:true},snap=>{
+function startListeners(){
+ unsubTasks=onSnapshot(tasksRef(),{includeMetadataChanges:true},snap=>{
   remoteTasks=new Map(snap.docs.map(d=>[d.id,d.data()]));haveTasks=true;
-  if(snap.metadata.hasPendingWrites){setStatus('↻ Syncing changes…');return;}
-  maybeApply();
- },err=>setStatus('Sync error: '+err.message));
- unsubMeta=onSnapshot(refMeta(),{includeMetadataChanges:true},snap=>{
+  taskPending=snap.metadata.hasPendingWrites;pendingWrites=taskPending||metaPending;
+  if(snap.metadata.fromCache&&!navigator.onLine){publish('error','Offline. Showing cached tasks.');return}
+  if(pendingWrites)publish('syncing','↻ Syncing tasks…');
+  applyRemote();
+ },err=>publish('error','Task listener failed: '+err.message));
+ unsubMeta=onSnapshot(metaRef(),{includeMetadataChanges:true},snap=>{
   remoteMeta=snap.exists()?snap.data():null;haveMeta=true;
-  if(snap.metadata.hasPendingWrites){setStatus('↻ Syncing changes…');return;}
-  maybeApply();
- },err=>setStatus('Sync error: '+err.message));
+  metaPending=snap.metadata.hasPendingWrites;pendingWrites=taskPending||metaPending;
+  if(metaPending)publish('syncing','↻ Syncing settings…');
+  applyRemote();
+ },err=>publish('error','Settings listener failed: '+err.message));
 }
-function enqueue(fn){writeChain=writeChain.then(fn).catch(err=>{console.error(err);setStatus('Sync failed: '+err.message)});return writeChain;}
-window.addEventListener('tracker:local-change',e=>{
- if(!connected||!user||switching||applyingRemote||!localCache)return;
- const next=e.detail,prev=localCache;localCache=structuredClone(next);lastAppliedFingerprint=null;
- const before=new Map(prev.tasks.map(t=>[String(t.id),t]));const after=new Map(next.tasks.map(t=>[String(t.id),t]));
- const updates=[];
- for(const [id,t] of after){if(JSON.stringify(t)!==JSON.stringify(before.get(id))){dirty.add(id);updates.push({id,t})}}
- for(const id of before.keys())if(!after.has(id)){dirty.add(id);updates.push({id,t:null})}
- const metaChanged=JSON.stringify(next.outlets)!==JSON.stringify(prev.outlets)||JSON.stringify(next.settings)!==JSON.stringify(prev.settings);
- if(!updates.length&&!metaChanged)return;
- setStatus('↻ Syncing changes…');
+function connect(initial){connected=true;localCache=clone(initial);buttons();publish('syncing','↻ Listening for cloud updates…');startListeners()}
+function enqueue(action){const currentSession=session;writeChain=writeChain.then(async()=>{if(currentSession!==session||!user)return;await action();}).catch(err=>{console.error(err);publish('error','Sync failed: '+err.message)});return writeChain}
+window.addEventListener('tracker:local-change',event=>{
+ if(!connected||!user||applyingRemote||!localCache)return;
+ const next=event.detail,previous=localCache;
+ const before=new Map(previous.tasks.map(t=>[String(t.id),t]));const after=new Map(next.tasks.map(t=>[String(t.id),t]));
+ const changes=[];
+ for(const [id,t] of after)if(JSON.stringify(t)!==JSON.stringify(before.get(id)))changes.push({id,t});
+ for(const id of before.keys())if(!after.has(id))changes.push({id,t:null});
+ const changedMeta=JSON.stringify(next.outlets)!==JSON.stringify(previous.outlets)||JSON.stringify(next.settings)!==JSON.stringify(previous.settings);
+ if(!changes.length&&!changedMeta)return;
+ localCache=clone(next);
+ changes.forEach(({id})=>dirty.add(id));if(changedMeta)metaDirty=true;
+ publish('syncing','↻ Saving changes to Firebase…');
  enqueue(async()=>{
-  // Commit only changed task documents, preserving unrelated edits from other devices.
-  for(let i=0;i<updates.length;i+=300){const batch=writeBatch(db);for(const {id,t} of updates.slice(i,i+300)){const r=doc(refTasks(),id);if(t)batch.set(r,t);else batch.delete(r)}await batch.commit()}
-  if(metaChanged)await setDoc(refMeta(),{outlets:next.outlets,settings:next.settings,updatedAt:new Date().toISOString()});
-  for(const {id} of updates)dirty.delete(id);
-  if(!dirty.size){maybeApply()}
+  for(let i=0;i<changes.length;i+=300){const batch=writeBatch(db);for(const {id,t} of changes.slice(i,i+300)){const ref=doc(tasksRef(),id);if(t)batch.set(ref,t);else batch.delete(ref)}await batch.commit()}
+  if(changedMeta)await setDoc(metaRef(),{outlets:next.outlets,settings:next.settings,updatedAt:new Date().toISOString()});
+  changes.forEach(({id})=>dirty.delete(id));if(changedMeta)metaDirty=false;
+  // Always accept the most recent snapshot after writes have been acknowledged.
+  applyRemote();
+  if(!dirty.size&&!metaDirty&&!pendingWrites)markSynced();
  });
 });
-login.onclick=async()=>{try{setStatus('Opening Google Sign-In…');await signInWithPopup(auth,new GoogleAuthProvider())}catch(e){setStatus('Sign-in failed: '+e.message)}};
-logout.onclick=async()=>{try{await signOut(auth)}catch(e){setStatus('Sign-out failed: '+e.message)}};
-use.onclick=async()=>{
- if(!user||connected)return;
- try{setStatus('Loading cloud tasks…');const remote=await loadRemote();
-  if(!remote.meta&&!remote.tasks.length){setStatus('Cloud is empty. Choose Upload to send this device’s tasks.');return}
-  const base=bridge().read();
-  if(!confirm('Use '+remote.tasks.length+' cloud tasks on this device? This replaces the tasks shown here. Export a JSON backup first if you need the current local tasks.'))return;
-  switching=true;const next={tasks:remote.tasks,outlets:remote.meta?.outlets||base.outlets,settings:remote.meta?.settings||base.settings};bridge().apply(next);localCache=structuredClone(next);switching=false;connected=true;buttons();listen();setStatus('● Synced across devices');
- }catch(e){switching=false;setStatus('Cloud load failed: '+e.message)}
-};
-upload.onclick=async()=>{
- if(!user||connected)return;
- try{const remote=await loadRemote();const local=bridge().read();
-  if(remote.tasks.length||remote.meta){setStatus('Cloud already has data. Use cloud tasks instead to avoid overwriting it.');return}
-  if(!confirm('Upload '+local.tasks.length+' local tasks and outlet settings to your EMPTY cloud account? Export a JSON backup first.'))return;
-  setStatus('Uploading tasks…');
-  for(let i=0;i<local.tasks.length;i+=300){const batch=writeBatch(db);for(const t of local.tasks.slice(i,i+300))batch.set(doc(refTasks(),String(t.id)),t);await batch.commit()}
-  await setDoc(refMeta(),{outlets:local.outlets,settings:local.settings,updatedAt:new Date().toISOString()});
-  localCache=structuredClone(local);connected=true;buttons();listen();setStatus('● Synced across devices');
- }catch(e){setStatus('Upload failed: '+e.message)}
-};
-window.addEventListener('offline',()=>publishStatus('error','Offline. Changes cannot sync until the connection returns.'));
-window.addEventListener('online',()=>{if(connected){setStatus('↻ Reconnecting to Firebase…');}else publishStatus('error','Online. Sign in and connect Cloud Sync in Settings.');});
- onAuthStateChanged(auth,u=>{stop();user=u;buttons();setStatus(u?'Signed in. Choose Use cloud tasks or Upload local tasks.':'Cloud sync off · local tasks remain available');if(u)detail.hidden=false;});
-</script></body></html>
+function confirmInApp({title,message,accept='Continue',danger=false}){
+ return new Promise(resolve=>{
+  const overlay=$('cloudConfirmOverlay'),heading=$('cloudConfirmTitle'),body=$('cloudConfirmMessage'),yes=$('cloudConfirmAccept'),no=$('cloudConfirmCancel');
+  heading.textContent=title;body.textContent=message;yes.textContent=accept;yes.classList.toggle('danger',danger);
+  overlay.hidden=false;const previous=document.activeElement;yes.focus();
+  const done=result=>{overlay.hidden=true;yes.removeEventListener('click',ok);no.removeEventListener('click',cancel);overlay.removeEventListener('click',outside);document.removeEventListener('keydown',escape);previous?.focus?.();resolve(result)};
+  const ok=()=>done(true),cancel=()=>done(false),outside=e=>{if(e.target===overlay)done(false)},escape=e=>{if(e.key==='Escape')done(false)};
+  yes.addEventListener('click',ok);no.addEventListener('click',cancel);overlay.addEventListener('click',outside);document.addEventListener('keydown',escape);
+ });
+}
+async function uploadEmptyCloud(local){
+ publish('syncing','↻ Uploading local tasks…');
+ for(let i=0;i<local.tasks.length;i+=300){const batch=writeBatch(db);for(const t of local.tasks.slice(i,i+300))batch.set(doc(tasksRef(),String(t.id)),t);await batch.commit()}
+ await setDoc(metaRef(),{outlets:local.outlets,settings:local.settings,updatedAt:new Date().toISOString()});
+ connect(local);
+}
+async function bootstrap(){
+ if(!user||booting)return;booting=true;const ticket=session;
+ try{
+  publish('syncing','↻ Checking cloud tasks…');const remote=await remoteRead();if(ticket!==session)return;
+  const local=bridge().read();
+  if(remote.tasks.length||remote.meta){
+   backupLocal();
+   const state={tasks:remote.tasks,outlets:remote.meta?.outlets||local.outlets,settings:remote.meta?.settings||local.settings};
+   applyingRemote=true;try{bridge().apply(state)}finally{applyingRemote=false}
+   connect(state);
+  }else if(local.tasks.length){
+   publish('error','Cloud is empty. Choose Upload local tasks once to start automatic sync.');
+   buttons();
+  }else{
+   await uploadEmptyCloud(local);
+  }
+ }catch(err){publish('error','Cloud connection failed: '+err.message)}finally{booting=false}
+}
+login.onclick=async()=>{try{publish('syncing','Opening Google Sign-In…');await signInWithPopup(auth,new GoogleAuthProvider())}catch(e){publish('error','Sign-in failed: '+e.message)}};
+logout.onclick=async()=>{try{await signOut(auth)}catch(e){publish('error','Sign-out failed: '+e.message)}};
+use.onclick=async()=>{if(!user||connected)return;try{
+ const remote=await remoteRead();if(!remote.tasks.length&&!remote.meta){publish('error','Cloud is empty. Upload local tasks instead.');return}
+ const approved=await confirmInApp({title:'Use cloud tasks?',message:`Load ${remote.tasks.length} cloud tasks on this device? This replaces the tasks currently shown here. Export a JSON backup first if needed.`,accept:'Use Cloud Tasks'});
+ if(!approved)return;backupLocal();const local=bridge().read(),state={tasks:remote.tasks,outlets:remote.meta?.outlets||local.outlets,settings:remote.meta?.settings||local.settings};
+ applyingRemote=true;try{bridge().apply(state)}finally{applyingRemote=false}connect(state);
+ }catch(e){publish('error','Cloud load failed: '+e.message)}};
+upload.onclick=async()=>{if(!user||connected)return;try{
+ const remote=await remoteRead();if(remote.tasks.length||remote.meta){publish('error','Cloud already contains data. Use cloud tasks instead; upload will not overwrite it.');return}
+ const local=bridge().read();const approved=await confirmInApp({title:'Upload local tasks?',message:`Upload ${local.tasks.length} tasks and your outlet settings to your empty cloud account? Export a JSON backup first.`,accept:'Upload to Cloud'});
+ if(!approved)return;backupLocal();await uploadEmptyCloud(local);
+ }catch(e){publish('error','Upload failed: '+e.message)}};
+window.addEventListener('offline',()=>publish('error','Offline. Changes will sync after reconnecting.'));
+window.addEventListener('online',()=>{if(connected){publish('syncing','↻ Reconnecting to Firebase…');applyRemote()}else if(user)bootstrap()});
+onAuthStateChanged(auth,u=>{stop();user=u;buttons();if(u){publish('syncing','↻ Connecting to your cloud tasks…');bootstrap()}else publish('error','Not signed in. Tasks are saved on this device only.')});
+</script>
+<style id="trackerV37Styles">
+#companionReminderSettings{max-width:650px;margin-top:18px;padding:22px;border:1px solid var(--border,#c3b5a2);border-radius:20px;background:var(--card,#29292d);color:inherit}
+#companionReminderSettings h2{margin:0 0 8px;font-size:20px}#companionReminderSettings p{opacity:.75;font-size:13px;line-height:1.5}
+#companionReminderSettings .reminder-row{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:11px 0;border-bottom:1px solid #8883;font-size:14px}
+#companionReminderSettings input[type=checkbox]{width:20px;height:20px;accent-color:#b89a77;flex-shrink:0}
+#companionReminderSettings select{min-height:42px;border-radius:9px;background:var(--card,#29292d);color:inherit;border:1px solid #8886;padding:7px}
+#companionReminderSettings .reminder-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
+#companionReminderSettings button{min-height:42px;padding:8px 14px;border-radius:11px;border:1px solid #a78b69;background:#b99b78;color:#201b17;font-weight:600;cursor:pointer}
+#cloudPanel{scroll-margin-top:22px}#cloudPanel.cloud-target-highlight{outline:3px solid #caa77d;outline-offset:4px;transition:outline-color 1s}
+@media(max-width:760px){#companionReminderSettings{padding:16px;margin-bottom:90px}.person-speech,.cat-speech{max-width:min(230px,calc(100vw - 40px))!important;overflow-wrap:anywhere}}
+</style>
+<script id="trackerV37CompanionReminders">
+(function(){
+ 'use strict';
+ const KEY='trackerCTRLCompanionReminderPrefsV37';
+ const defaults={enabled:true,frequency:15,deadlines:true,reactions:true,casual:true};
+ let prefs;try{prefs={...defaults,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{prefs={...defaults}}
+ const readTasks=()=>{try{return window.trackerCloudBridge?.read()?.tasks||[]}catch{return []}};
+ const localDay=d=>{if(!/^\d{4}-\d\d-\d\d$/.test(String(d||'')))return null;const [y,m,day]=d.split('-').map(Number);const date=new Date(y,m-1,day);return date.getFullYear()===y&&date.getMonth()===m-1&&date.getDate()===day?date:null};
+ const dayDiff=d=>{const a=localDay(d);if(!a)return null;const now=new Date();const today=new Date(now.getFullYear(),now.getMonth(),now.getDate());return Math.round((a-today)/86400000)};
+ const active=()=>readTasks().filter(t=>t&&t.status!=='Done'&&t.status!=='On Hold'&&!t.archived&&!t.finalized);
+ function summary(){const tasks=active();const overdue=tasks.filter(t=>dayDiff(t.deadline)!==null&&dayDiff(t.deadline)<0);const due=tasks.filter(t=>dayDiff(t.deadline)===0);const tomorrow=tasks.filter(t=>dayDiff(t.deadline)===1);const urgent=tasks.filter(t=>String(t.priority).toLowerCase()==='urgent');return {tasks,overdue,due,tomorrow,urgent}}
+ function reminder(who){const {tasks,overdue,due,tomorrow,urgent}=summary();const title=t=>String(t?.title||'a task').slice(0,54);
+  if(prefs.deadlines){if(overdue.length)return who==='ash'?`Meow! ${overdue.length} overdue task${overdue.length===1?'':'s'} need attention. 🐾`:`${overdue.length} overdue task${overdue.length===1?'':'s'}. Start with “${title(overdue[0])}”.`;
+  if(due.length)return who==='ash'?`Psst! “${title(due[0])}” is due today! 🐾`:`${due.length} task${due.length===1?' is':'s are'} due today, including “${title(due[0])}”.`;
+  if(tomorrow.length)return who==='ash'?`Tomorrow's deadline: “${title(tomorrow[0])}”.`:`“${title(tomorrow[0])}” is due tomorrow. A little progress today will help.`;
+  if(urgent.length)return who==='ash'?`Meow! ${urgent.length} urgent task${urgent.length===1?'':'s'} on the list!`:`${urgent.length} urgent task${urgent.length===1?' needs':'s need'} attention. “${title(urgent[0])}” is one of them.`;}
+  if(!tasks.length)return who==='ash'?'All clear. Nap time! 🐱':'No active tasks right now. Enjoy the breathing room!';
+  return who==='ash'?`${tasks.length} active tasks. I am supervising. 🐾`:`You have ${tasks.length} active tasks. One at a time!`;
+ }
+ let lastShown=0,turn=0,hideTimer=null;
+ function speak(who,message,force=false){if(!prefs.enabled||document.hidden)return;if(!force&&Date.now()-lastShown<9000)return;const id=who==='ash'?'catSpeech':'personSpeech';const el=document.getElementById(id);if(!el)return;
+  for(const other of ['catSpeech','personSpeech'])if(other!==id)document.getElementById(other)?.classList.remove('show');
+  el.textContent=message;el.classList.add('show');lastShown=Date.now();clearTimeout(hideTimer);hideTimer=setTimeout(()=>el.classList.remove('show'),6500);
+ }
+ function notify(){if(!prefs.enabled||!prefs.deadlines)return;const who=turn++%2?'ash':'wifey';speak(who,reminder(who))}
+ let interval;
+ function schedule(){clearInterval(interval);interval=setInterval(()=>{if(prefs.enabled&&(prefs.deadlines||prefs.casual))notify()},Math.max(5,Number(prefs.frequency)||15)*60000)}
+ function save(){try{localStorage.setItem(KEY,JSON.stringify(prefs))}catch{}schedule()}
+ const panel=document.createElement('section');panel.id='companionReminderSettings';panel.innerHTML=`<h2>🐱💕 Companion Reminders</h2><p>Wifey and Ash check your real task deadlines while Tracker CTRL is open. No background push notifications.</p>
+ <label class="reminder-row">Enable companion reminders <input type="checkbox" data-pref="enabled"></label>
+ <label class="reminder-row">Reminder frequency <select data-pref="frequency"><option value="5">Every 5 minutes</option><option value="15">Every 15 minutes</option><option value="30">Every 30 minutes</option></select></label>
+ <label class="reminder-row">Deadline and overdue reminders <input type="checkbox" data-pref="deadlines"></label>
+ <label class="reminder-row">Task completion and status reactions <input type="checkbox" data-pref="reactions"></label>
+ <label class="reminder-row">Casual check-ins <input type="checkbox" data-pref="casual"></label>
+ <div class="reminder-actions"><button type="button" id="companionTestWifey">Ask Wifey</button><button type="button" id="companionTestAsh">Ask Ash</button></div>`;
+ const settings=document.getElementById('view-settings');if(settings){settings.appendChild(panel);panel.querySelectorAll('[data-pref]').forEach(el=>{const key=el.dataset.pref;if(el.type==='checkbox')el.checked=!!prefs[key];else el.value=String(prefs[key]);el.addEventListener('change',()=>{prefs[key]=el.type==='checkbox'?el.checked:Number(el.value);save()})});}
+ document.getElementById('companionTestWifey')?.addEventListener('click',()=>speak('wifey',reminder('wifey'),true));
+ document.getElementById('companionTestAsh')?.addEventListener('click',()=>speak('ash',reminder('ash'),true));
+ // Capture navigation before the older click handler sends users only to the top of Settings.
+ document.querySelectorAll('.cloud-open-settings').forEach(button=>button.addEventListener('click',event=>{
+   event.preventDefault();event.stopImmediatePropagation();
+   const nav=document.querySelector('[data-view="settings"]');if(nav)nav.click();
+   document.querySelectorAll('.cloud-indicator-popover').forEach(pop=>pop.hidden=true);
+   const cloud=document.getElementById('cloudPanel');if(!cloud)return;
+   cloud.hidden=false;cloud.classList.remove('hidden');
+   const details=document.getElementById('cloudDetails');if(details)details.hidden=false;
+   requestAnimationFrame(()=>setTimeout(()=>{cloud.scrollIntoView({behavior:'smooth',block:'start'});cloud.classList.add('cloud-target-highlight');setTimeout(()=>cloud.classList.remove('cloud-target-highlight'),2200)},120));
+ },true));
+ // React to changes already emitted by the tracker, without modifying its save logic.
+ window.addEventListener('ash:task-change',e=>{if(!prefs.enabled||!prefs.reactions)return;const d=e.detail||{};const name=String(d.title||'the task').slice(0,50);if(d.created){speak('wifey',`“${name}” is on the list. Let's make progress!`,true);return}if(d.status===d.previousStatus)return;
+  const messages={'Done':`“${name}” is done! One less task. ✨`,'On Hold':`“${name}” is on hold. I'll keep an eye on it.`,'For Approval':`“${name}” is awaiting approval.`,'In Progress':`“${name}” is in progress. You've got this!`,'To Be Done':`“${name}” is ready when you are.`};if(messages[d.status])speak(d.status==='On Hold'?'ash':'wifey',messages[d.status],true);
+ });
+ window.addEventListener('ash:tasks-finalized',e=>{if(prefs.enabled&&prefs.reactions)speak('ash',`${e.detail?.count||1} task(s) archived. Meow! 🐾`,true)});
+ document.getElementById('personInteract')?.addEventListener('click',()=>{if(prefs.enabled)speak('wifey',reminder('wifey'),true)},true);
+ document.getElementById('catInteract')?.addEventListener('click',()=>{if(prefs.enabled)speak('ash',reminder('ash'),true)},true);
+ schedule();setTimeout(()=>{if(prefs.enabled&&prefs.deadlines&&summary().tasks.length)notify()},12500);
+})();
+</script>
+</body></html>
