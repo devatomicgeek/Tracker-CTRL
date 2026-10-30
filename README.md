@@ -1,23 +1,19 @@
-# Tracker CTRL v3.2
+# Tracker CTRL v3.3 · GitHub Pages
 
-A self-contained task tracker with Ash and Wifey, task reporting, and light/dark modes.
+## Publish
+Upload `index.html` and `.nojekyll` to the repository root, then enable **Settings > Pages > Deploy from a branch > main > /(root)**.
 
-## Publish on GitHub Pages
+## Firebase setup (REQUIRED)
+1. Enable **Authentication > Google** in Firebase Console. Add `YOUR-USERNAME.github.io` under Authentication > Settings > Authorized domains.
+2. Create Firestore in **production mode**. Copy the rules from `firestore.rules` into Firestore > Rules and click Publish. These rules include **both** tasks and settings. The older task-only rules will block synchronization of outlets/settings.
+3. Open the published HTTPS website, expand **Cloud Sync** at the bottom-left and sign in with Google.
+4. **Export JSON backup first** from Settings. On your first device, choose **Upload this device's tasks to cloud** only if the cloud is empty. On your second device, choose **Use cloud tasks on this device**.
+5. Changes are synced to the same Google account. Other Google accounts get separate datasets. The app stays usable locally if signed out, but offline changes made while signed out are not automatically merged into the cloud.
 
-1. Create a public GitHub repository (for example `Tracker-CTRL`).
-2. Upload **the contents of this folder** to the repository root, including `index.html`.
-3. Open repository **Settings → Pages**. Under **Build and deployment**, choose **Deploy from a branch**, branch **main**, folder **/(root)**, then Save.
-4. Wait for deployment, then open `https://YOUR-USERNAME.github.io/Tracker-CTRL/`.
-
-## Data and privacy
-
-Task data is stored in your browser's localStorage, not on GitHub. GitHub Pages is public: do not put passwords or private task data directly in `index.html` or commit backups to the repository. Different devices/browsers do not sync automatically. Use the tracker Export/Import feature to move data manually. Keep backups before replacing the site.
-
-## Local use
-
-Open `index.html` in a modern browser, or serve the folder using `python3 -m http.server 8000` and open `http://localhost:8000`.
-
-## What's new in v3.2
-
-- View Report preview and image output follow the global Light/Dark mode.
-- GitHub Pages-ready `index.html`, `.nojekyll`, `.gitignore`, and publishing instructions.
+## Important limitations
+- Cloud sync needs internet and the Firebase CDN; opening the HTML with file:// may prevent Google sign-in. GitHub Pages HTTPS is recommended.
+- Each task is a separate Firestore document. Rapid conflicting edits to the **same task** on two devices are last-write-wins. Outlet and profile settings are stored together and likewise last-write-wins.
+- Avoid editing local tasks while waiting for initial cloud selection. Changes made while signed out are local only.
+- Firestore offline persistence is not enabled in this version. When disconnected, local edits remain in this browser, but automatic reconnection merging is not guaranteed. Export a backup before major changes.
+- Firebase web config is public by design. Never commit service-account credentials.
+- Firestore security rules control data access. Anyone with access to your Google account can access your tracker data.
